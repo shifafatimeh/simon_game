@@ -1,0 +1,113 @@
+* {
+    padding: 0%;
+    margin: 0%;
+}
+
+body {
+
+    margin-top: 6rem;
+    background-color: #E2C044;
+
+}
+
+.heading {
+    width: 50%;
+    margin-left: 23.9%;
+    text-align: center;
+}
+
+h1 {
+    color: #E2C044;
+    background-color: #587B7F;
+    /* margin-left: 40%; */
+
+}
+
+.wholebox {
+    margin: 2rem;
+    color: blueviolet;
+    background-color: #393E41;
+    height: 500px;
+    width: 800px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-left: 25.5%;
+}
+
+.boxex {
+    height: 200px;
+    width: 200px;
+    margin-right: 4rem;
+    margin-left: 3rem;
+    margin-top: 1.5rem;
+    /* background-color: beige; */
+    border: 2px solid none;
+    box-shadow: 25px 30px 10px 0 rgba(42, 31, 31, 0.5);
+    border-radius: 50%;
+    /* transition: 0.5s ease; */
+}
+
+@keyframes animationBox {
+    0% {
+        background-color: #fff
+            /* opacity: 0.4; */
+    }
+
+    50% {
+        background-color: #fff;
+        /* opacity: 0.3; */
+        /* Styles midway through the animation */
+    }
+
+    100% {
+        opacity: 1;
+        /* Styles at the end of the animation */
+    }
+}
+
+.animated {
+    animation: animationBox 0.8s ease-in-out 0.2s 1;
+}
+
+.box0 {
+    background-color: #41EAD4;
+    /* transition: #41EAD4 0.5s ease; */
+}
+
+.box1 {
+    background-color: #FF7F11;
+    /* transition: #FF7F11 0.5s ease; */
+}
+
+.box2 {
+    background-color: #FBFF12;
+    /* transition: #FBFF12 0.5s ease; */
+}
+
+.box3 {
+    background-color: #FF206E;
+    /* transition: #FF206E 0.5s ease; */
+}
+
+.boxex:hover {
+    cursor: pointer;
+    opacity: 0.9;
+    /* box-shadow: none; */
+    /* box-shadow: 25px 30px 5px 0 rgba(50, 44, 44, 0.5) */
+    /* background-color: aquamarine; */
+}
+
+
+
+/* animation: name duration timing-function delay iteration-count direction fill-mode play-state; */
+/* animation: moveRight 2s linear infinite; */
+.scoreBoard {
+    color: #E2C044;
+    background-color: #587B7F;
+    height: 100px;
+    font-size: 5rem;
+    width: 20%;
+    margin-left: 40%;
+    text-align: center;
+}
