@@ -4,14 +4,27 @@ let emptyArray = []
 console.log(emptyArray)
 // emptyArray.append(selectedElement)
 
-let score = 0
+let score = 1
+let currentIndex = 0;
 
 
 let checkCorrect = blinkAfter()
 
+function removeAni(selectedElement) {
+    console.log(selectedElement);
+
+    // Add the "animated" class
+    selectedElement.classList.add("animated");
+
+    // Use setTimeout to remove the "animated" class after 250 milliseconds
+    setTimeout(() => {
+        selectedElement.classList.remove("animated");
+    }, 1000);
+}
+
 function randomNum() {
-    // let randomNumber = Math.floor(Math.random() * 4);
-    let randomNumber = 0
+    let randomNumber = Math.floor(Math.random() * 4);
+    // let randomNumber = 2
     // console.log(randomNumber)
     let arrayNoden = Array.from(seleBox)
     let newSelect = arrayNoden[randomNumber]
@@ -33,8 +46,10 @@ function blinkAfter() {
     // let emptyArray = []
 
     console.log(selectedElement)
-    // removeAni(selectedElement);
-    selectedElement.classList.add("animated")
+
+
+    removeAni(selectedElement);
+    // selectedElement.classList.add("animated")
 
 
     // console.log(selectedElement)
@@ -48,22 +63,34 @@ function blinkAfter() {
 seleBox.forEach(element => {
 
     element.addEventListener("click", () => {
+
         console.log(emptyArray)
-        removeAni(checkCorrect);
-        // console.log(emptyArray)
+        console.log(emptyArray)
+
+
+        if (emptyArray[currentIndex] === element) {
+            console.log(emptyArray[currentIndex])
 
 
 
-        if (checkCorrect === element) {
+            currentIndex++;
 
-            // console.log("happy")
-            score += 1
-            console.log(score)
-            scoreBox.innerText = "Score: " + score;
-            // removeAni(checkCorrect);
 
-            checkCorrect = blinkAfter();
+            // Check if the sequence is complete
+            if (currentIndex === emptyArray.length) {
+                score++
+                scoreBox.innerText = "LEVEL: " + score;
+
+                console.log('Sequence completed successfully!');
+
+                currentIndex = 0;
+
+                checkCorrect = blinkAfter();
+            }
+
         } else {
+            console.log('Incorrect element clicked. Restarting sequence.');
+            currentIndex = 0;
             scoreBox.style.fontSize = "3rem";
             scoreBox.style.height = "120px"
             scoreBox.innerText = "Sorry! you are out";
@@ -72,18 +99,16 @@ seleBox.forEach(element => {
             wholeBoxElements.forEach(element => {
                 element.style.pointerEvents = "none"; // Set pointer-events to "none" for each wholebox element
             });
-
         }
 
+        // else {
+
+
     })
+
+
 })
 
-function removeAni(selectedElement) {
-    console.log(selectedElement)
-    if (selectedElement.classList.contains("animated")) {
-        selectedElement.classList.remove("animated")
-        console.log(selectedElement)
-    }
 
-}
+
 

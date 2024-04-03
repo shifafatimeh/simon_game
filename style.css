@@ -6,7 +6,7 @@
 body {
 
     margin-top: 6rem;
-    background-color: #E2C044;
+    background-color: rgb(186, 179, 179);
 
 }
 
@@ -17,8 +17,9 @@ body {
 }
 
 h1 {
-    color: #E2C044;
-    background-color: #587B7F;
+    color: #FFF;
+    background-color: #393E41;
+
     /* margin-left: 40%; */
 
 }
@@ -67,7 +68,9 @@ h1 {
 }
 
 .animated {
-    animation: animationBox 0.8s ease-in-out 0.2s 1;
+    /* animation: animationBox 0.8s ease-in-out 0.2s 1; */
+    background-color: #FFF;
+
 }
 
 .box0 {
@@ -103,8 +106,8 @@ h1 {
 /* animation: name duration timing-function delay iteration-count direction fill-mode play-state; */
 /* animation: moveRight 2s linear infinite; */
 .scoreBoard {
-    color: #E2C044;
-    background-color: #587B7F;
+    color: #FFF;
+    background-color: #393E41;
     height: 100px;
     font-size: 5rem;
     width: 20%;
